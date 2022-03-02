@@ -90,21 +90,21 @@ public with sharing class ConsentCaptureService {
 
   // Get the Description on the Contact Point Consent Type Records
   public static String getContactPointTypeDescription(String cpTypeListString) {
-    List<concap__Consent_Capture_Utility__mdt> consentCaptureSettings = [
-      SELECT Id, concap__Output_Value__c
-      FROM concap__Consent_Capture_Utility__mdt
+    List<Consent_Capture_Utility__mdt> consentCaptureSettings = [
+      SELECT Id, Output_Value__c
+      FROM Consent_Capture_Utility__mdt
       WHERE
-        concap__Setting_Type__c = 'description'
-        AND concap__Contact_Point_Consent_Type_Value__c = :cpTypeListString
+        Setting_Type__c = 'description'
+        AND Contact_Point_Consent_Type_Value__c = :cpTypeListString
       WITH SECURITY_ENFORCED
       LIMIT 1
     ];
-    concap__Consent_Capture_Utility__mdt consentCaptureSetting = (consentCaptureSettings.size() ==
+    Consent_Capture_Utility__mdt consentCaptureSetting = (consentCaptureSettings.size() ==
       1)
       ? consentCaptureSettings.get(0)
       : null;
     if (consentCaptureSetting != null) {
-      return consentCaptureSetting.concap__Output_Value__c;
+      return consentCaptureSetting.Output_Value__c;
     } else {
       return null;
     }
@@ -114,19 +114,19 @@ public with sharing class ConsentCaptureService {
 
   @AuraEnabled(Cacheable=true)
   public static String getContactPointEffectiveToMax() {
-    List<concap__Consent_Capture_Utility__mdt> consentCaptureSettings = [
-      SELECT Id, concap__Output_Value__c
-      FROM concap__Consent_Capture_Utility__mdt
-      WHERE concap__Setting_Type__c = 'slider'
+    List<Consent_Capture_Utility__mdt> consentCaptureSettings = [
+      SELECT Id, Output_Value__c
+      FROM Consent_Capture_Utility__mdt
+      WHERE Setting_Type__c = 'slider'
       WITH SECURITY_ENFORCED
       LIMIT 1
     ];
-    concap__Consent_Capture_Utility__mdt consentCaptureSetting = (consentCaptureSettings.size() ==
+    Consent_Capture_Utility__mdt consentCaptureSetting = (consentCaptureSettings.size() ==
       1)
       ? consentCaptureSettings.get(0)
       : null;
     if (consentCaptureSetting != null) {
-      return consentCaptureSetting.concap__Output_Value__c;
+      return consentCaptureSetting.Output_Value__c;
     } else {
       return null;
     }

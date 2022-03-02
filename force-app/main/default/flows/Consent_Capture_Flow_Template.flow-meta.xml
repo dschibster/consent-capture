@@ -409,7 +409,7 @@
         </connector>
         <fields>
             <name>ConsentCaptureDisplayComponent</name>
-            <extensionName>concap:conCapDisplayAura</extensionName>
+            <extensionName>c:conCapDisplayAura</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>recordId</name>
@@ -451,7 +451,7 @@
         </fields>
         <fields>
             <name>conCaptureTypeAura</name>
-            <extensionName>concap:conCapCaptureTypeAura</extensionName>
+            <extensionName>c:conCapCaptureTypeAura</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <isRequired>true</isRequired>
             <outputParameters>
@@ -476,7 +476,7 @@
         </connector>
         <fields>
             <name>ConCapPurposesAura</name>
-            <extensionName>concap:conCapPurposesAura</extensionName>
+            <extensionName>c:conCapPurposesAura</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <isRequired>true</isRequired>
             <outputParameters>
@@ -530,7 +530,7 @@
         </connector>
         <fields>
             <name>conCapTypesAura</name>
-            <extensionName>concap:conCapTypesAura</extensionName>
+            <extensionName>c:conCapTypesAura</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <isRequired>true</isRequired>
             <outputParameters>
@@ -555,7 +555,7 @@
         </connector>
         <fields>
             <name>conCapEffectiveToAura</name>
-            <extensionName>concap:conCapEffectiveToAura</extensionName>
+            <extensionName>c:conCapEffectiveToAura</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <isRequired>true</isRequired>
             <outputParameters>
@@ -565,7 +565,7 @@
         </fields>
         <fields>
             <name>conCapStatus</name>
-            <extensionName>concap:conCapStatusAura</extensionName>
+            <extensionName>c:conCapStatusAura</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <isRequired>true</isRequired>
             <outputParameters>

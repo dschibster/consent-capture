@@ -38,16 +38,16 @@ public with sharing class ConsentCaptureService_Test {
   }
 
   static testMethod void getContactPointTypeDescription_positive() {
-    List<concap__Consent_Capture_Utility__mdt> consentCaptureSettings = [
-      SELECT Id, concap__Output_Value__c
-      FROM concap__Consent_Capture_Utility__mdt
+    List<Consent_Capture_Utility__mdt> consentCaptureSettings = [
+      SELECT Id, Output_Value__c
+      FROM Consent_Capture_Utility__mdt
       WHERE
-        concap__Setting_Type__c = 'description'
-        AND concap__Contact_Point_Consent_Type_Value__c = :'Email'
+        Setting_Type__c = 'description'
+        AND Contact_Point_Consent_Type_Value__c = :'Email'
       WITH SECURITY_ENFORCED
       LIMIT 1
     ];
-    concap__Consent_Capture_Utility__mdt consentCaptureSetting = (consentCaptureSettings.size() ==
+    Consent_Capture_Utility__mdt consentCaptureSetting = (consentCaptureSettings.size() ==
       1)
       ? consentCaptureSettings.get(0)
       : null;
@@ -58,7 +58,7 @@ public with sharing class ConsentCaptureService_Test {
     Test.stopTest();
     System.assertEquals(
       description,
-      consentCaptureSetting.concap__Output_Value__c,
+      consentCaptureSetting.Output_Value__c,
       'The Custom Meatadata type is not configured'
     );
   }

@@ -17,5 +17,4 @@
     <tabs>standard-DataUseLegalBasis</tabs>
     <tabs>standard-report</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Consent_Capture_UtilityBar</utilityBar>
 </CustomApplication>
