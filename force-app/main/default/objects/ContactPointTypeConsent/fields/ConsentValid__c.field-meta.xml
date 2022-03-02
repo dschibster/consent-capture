@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ConsentValid__c</fullName>
     <externalId>false</externalId>
-    <formula>NOW() &gt;= EffectiveFrom &amp;&amp; NOW() &lt; EffectiveTo &amp;&amp; ISPICKVAL(PrivacyConsentStatus,&apos;OptIn&apos;)</formula>
+    <formula>NOW() &gt;= EffectiveFrom &amp;&amp; NOW() &lt; EffectiveTo</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>ConsentValid</label>
     <trackHistory>false</trackHistory>
