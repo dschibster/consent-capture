@@ -4,14 +4,21 @@
             "path": "force-app",
             "default": true,
             "package": "Consent Capture",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionName": "version 1.7",
+            "versionNumber": "1.7.0.0",
+            "apexTestAccess": {
+                "permissionSets": [
+                    "Consent_Capture_User"
+                ]
+            }
         }
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "48.0",
+    "sourceApiVersion": "53.0",
     "packageAliases": {
-        "Consent Capture": "0Ho09000000sYAnCAM"
+        "Consent Capture": "0Ho09000000sYAnCAM",
+        "Consent Capture@0.1.0-1": "04t09000000ijkLAAQ",
+        "Consent Capture@1.7.0-0": "04t09000000ijkVAAQ"
     }
 }
